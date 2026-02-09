@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/5547999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação.";
+const WHATSAPP_LINK = "https://wa.me/5547999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
 
 const HeroSection = () => {
   return (
@@ -11,11 +11,11 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="New Age Derma BC - Clínica de Dermatologia"
+          alt="New Age Derma - Dermatologia em Balneário Camboriú"
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-charcoal/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate/90 via-slate/70 to-slate/30" />
       </div>
 
       {/* Content */}
@@ -30,16 +30,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6"
+            className="mb-4"
           >
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-gold-light">
-              Balneário Camboriú
+            <span className="font-body text-sm tracking-[0.3em] uppercase text-teal-light">
+              Dr. Fabricio Dall'Igna — CRM/SC
             </span>
           </motion.div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-primary-foreground leading-[0.95] mb-6">
-            Sua pele merece o{" "}
-            <span className="text-gradient-gold italic font-medium">melhor</span>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-cream leading-[0.95] mb-6">
+            Dermatologia{" "}
+            <span className="text-gradient-teal italic font-medium">de excelência</span>
           </h1>
 
           <motion.p
@@ -48,8 +48,8 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="font-body text-lg md:text-xl text-cream-dark/80 mb-10 max-w-lg leading-relaxed"
           >
-            Tratamentos dermatológicos e estéticos avançados com tecnologia de ponta 
-            e atendimento personalizado.
+            Diagnóstico preciso, cirurgias dermatológicas e tratamentos avançados 
+            com atendimento humanizado em Balneário Camboriú.
           </motion.p>
 
           <motion.div
@@ -62,16 +62,16 @@ const HeroSection = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-gold text-primary-foreground font-body font-medium px-8 py-4 rounded-full inline-flex items-center justify-center gap-3 text-lg shadow-gold hover:scale-105 transition-transform duration-300"
+              className="bg-gradient-teal text-primary-foreground font-body font-medium px-8 py-4 rounded-full inline-flex items-center justify-center gap-3 text-lg shadow-teal hover:scale-105 transition-transform duration-300"
             >
               <MessageCircle className="w-5 h-5" />
-              Agende sua Avaliação
+              Agende sua Consulta
             </a>
             <a
               href="#servicos"
-              className="font-body font-medium px-8 py-4 rounded-full inline-flex items-center justify-center border border-cream-dark/30 text-cream-dark/90 hover:border-gold hover:text-gold transition-colors duration-300"
+              className="font-body font-medium px-8 py-4 rounded-full inline-flex items-center justify-center border border-cream-dark/30 text-cream-dark/90 hover:border-teal hover:text-teal transition-colors duration-300"
             >
-              Conheça os Tratamentos
+              Conheça as Especialidades
             </a>
           </motion.div>
         </motion.div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="w-6 h-10 border-2 border-cream-dark/30 rounded-full flex items-start justify-center p-1.5"
         >
-          <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+          <div className="w-1.5 h-1.5 rounded-full bg-teal" />
         </motion.div>
       </motion.div>
     </section>

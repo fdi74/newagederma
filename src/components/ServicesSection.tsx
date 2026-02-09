@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Sparkles, Syringe, Sun, Zap, Heart, Scissors } from "lucide-react";
+import { Stethoscope, Scissors, Search, ShieldCheck, Microscope, Activity } from "lucide-react";
 
 const services = [
   {
-    icon: Syringe,
-    title: "Toxina Botulínica",
-    description: "Suavize linhas de expressão com naturalidade e precisão.",
-  },
-  {
-    icon: Sparkles,
-    title: "Preenchimento Facial",
-    description: "Restaure volume e contornos com ácido hialurônico premium.",
-  },
-  {
-    icon: Sun,
-    title: "Bioestimuladores",
-    description: "Estimule o colágeno natural para uma pele mais firme e jovem.",
-  },
-  {
-    icon: Zap,
-    title: "Laser e Tecnologias",
-    description: "Tratamentos avançados com laser para manchas, cicatrizes e rejuvenescimento.",
-  },
-  {
-    icon: Heart,
-    title: "Skincare Personalizado",
-    description: "Protocolos sob medida para cada tipo de pele e necessidade.",
+    icon: Stethoscope,
+    title: "Consulta Dermatológica",
+    description: "Avaliação clínica completa da pele, cabelos e unhas com diagnóstico preciso e tratamento personalizado.",
   },
   {
     icon: Scissors,
-    title: "Procedimentos Dermatológicos",
-    description: "Tratamentos clínicos para acne, melasma, rosácea e mais.",
+    title: "Cirurgia Dermatológica",
+    description: "Remoção de lesões, cistos, lipomas e tumores cutâneos com técnicas minimamente invasivas.",
+  },
+  {
+    icon: Search,
+    title: "Dermatoscopia Digital",
+    description: "Mapeamento e acompanhamento de pintas e lesões com tecnologia avançada de imagem.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Câncer de Pele",
+    description: "Diagnóstico precoce e tratamento cirúrgico de carcinomas e melanomas.",
+  },
+  {
+    icon: Microscope,
+    title: "Biópsia de Pele",
+    description: "Procedimento diagnóstico com análise histopatológica para investigação de lesões suspeitas.",
+  },
+  {
+    icon: Activity,
+    title: "Tratamentos Clínicos",
+    description: "Acne, rosácea, psoríase, dermatite, melasma e outras dermatoses com protocolos atualizados.",
   },
 ];
 
@@ -46,11 +46,11 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-            Tratamentos
+            Especialidades
           </span>
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground">
-            Excelência em cada{" "}
-            <span className="text-gradient-gold italic font-medium">detalhe</span>
+            Cuidado completo para a{" "}
+            <span className="text-gradient-teal italic font-medium">sua pele</span>
           </h2>
         </motion.div>
 
@@ -62,9 +62,9 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-gold transition-all duration-500 cursor-pointer"
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-teal transition-all duration-500 cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-teal flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-6 h-6 text-primary-foreground" />
               </div>
               <h3 className="font-display text-2xl font-medium text-foreground mb-3">

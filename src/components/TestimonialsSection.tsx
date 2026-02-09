@@ -4,20 +4,20 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Carolina M.",
-    procedure: "Toxina Botulínica",
-    text: "Resultado incrível e super natural! A equipe é atenciosa e me deixou muito confortável durante todo o procedimento.",
+    procedure: "Cirurgia Dermatológica",
+    text: "Fiz a remoção de uma lesão suspeita e o Dr. Fabricio foi extremamente cuidadoso. Resultado excelente e cicatrização perfeita.",
     rating: 5,
   },
   {
-    name: "Fernanda S.",
-    procedure: "Bioestimuladores",
-    text: "Minha pele nunca esteve tão bonita. O tratamento foi personalizado e os resultados superaram minhas expectativas.",
+    name: "Roberto S.",
+    procedure: "Câncer de Pele",
+    text: "Diagnóstico precoce que fez toda a diferença. Profissional atencioso, me explicou cada etapa do tratamento com clareza.",
     rating: 5,
   },
   {
     name: "Juliana R.",
-    procedure: "Preenchimento Facial",
-    text: "Profissionais excepcionais. Me senti segura do início ao fim. Resultado harmonioso e natural, como eu queria.",
+    procedure: "Tratamento de Acne",
+    text: "Depois de anos lutando com acne, finalmente encontrei um tratamento que funciona. Atendimento humanizado e resultados reais.",
     rating: 5,
   },
 ];
@@ -37,8 +37,8 @@ const TestimonialsSection = () => {
             Depoimentos
           </span>
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground">
-            Quem já{" "}
-            <span className="text-gradient-gold italic font-medium">experimentou</span>
+            A confiança de quem{" "}
+            <span className="text-gradient-teal italic font-medium">já se cuidou</span>
           </h2>
         </motion.div>
 
@@ -52,10 +52,10 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="relative p-8 rounded-2xl bg-background border border-border shadow-soft"
             >
-              <Quote className="w-8 h-8 text-gold/20 mb-4" />
+              <Quote className="w-8 h-8 text-teal/20 mb-4" />
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                  <Star key={i} className="w-4 h-4 fill-teal text-teal" />
                 ))}
               </div>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
