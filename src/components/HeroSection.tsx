@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/5547999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
+const WHATSAPP_LINK = "https://wa.me/5547991549098?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
 
 const HeroSection = () => {
   return (
