@@ -10,11 +10,30 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-// 1. Definição dos dados (Certifique-se que essas imagens existem na pasta assets)
+// 1. Importar as imagens (Aqui você cria um "apelido" para o arquivo)
+import antesFacial from "@/assets/before.jpg";
+import depoisFacial from "@/assets/after.jpg";
+
+// 2. Definição dos dados (Use o "apelido" SEM aspas)
 const transformations = [
-  { id: 1, label: "Facial", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
-  { id: 2, label: "Corporal", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
-  { id: 3, label: "Capilar", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
+  { 
+    id: 1, 
+    label: "Facial", 
+    beforeImage: antesFacial, // Variável, não string!
+    afterImage: depoisFacial 
+  },
+  { 
+    id: 2, 
+    label: "Corporal", 
+    beforeImage: antesFacial, 
+    afterImage: depoisFacial 
+  },
+  { 
+    id: 3, 
+    label: "Capilar", 
+    beforeImage: antesFacial, 
+    afterImage: depoisFacial 
+  },
 ];
 
 const Index = () => {
