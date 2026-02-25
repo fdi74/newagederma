@@ -6,7 +6,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import Estetico from "@/components/ProceduresSection";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
       <AboutSection />
       <section id="depoimentos">
         <TestimonialsSection />
-      <Estetico />
       <CTASection />
       <Footer />
       <WhatsAppFloat />
