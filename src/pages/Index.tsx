@@ -19,7 +19,6 @@ const Index = () => {
         <TestimonialsSection />
       <Estetico />
       <CTASection />
-      
       <Footer />
       <WhatsAppFloat />
     </main>
