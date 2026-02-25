@@ -21,7 +21,7 @@ const ProceduresSection = () => {
             Excelência em cada detalhe
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-4">
-            Nossos <span className="text-gradient-teal italic">Procedimentos</span>
+            Nossos <span className="text-gradient-teal italic">Procedimentos Estéticos</span>
           </h2>
           <p className="text-muted-foreground font-body text-sm max-w-lg mx-auto">
             Tecnologia de ponta aliada a um olhar clínico refinado. Conheça os tratamentos que transformam a sua relação com a pele.
