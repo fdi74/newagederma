@@ -21,7 +21,9 @@ const Index = () => {
         <section id="depoimentos">
           <TestimonialsSection />
         </section>
+        
         <Estetica /> 
+        
         <CTASection />
       </main>
       
