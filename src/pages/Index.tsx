@@ -12,9 +12,9 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 // 1. Definição dos dados (Certifique-se que essas imagens existem na pasta assets)
 const transformations = [
-  { id: 1, label: "Facial", beforeImage: "/before-facial.jpg", afterImage: "/after-facial.jpg" },
-  { id: 2, label: "Corporal", beforeImage: "/before-body.jpg", afterImage: "/after-body.jpg" },
-  { id: 3, label: "Capilar", beforeImage: "/before-hair.jpg", afterImage: "/after-hair.jpg" },
+  { id: 1, label: "Facial", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
+  { id: 2, label: "Corporal", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
+  { id: 3, label: "Capilar", beforeImage: "/before.jpg", afterImage: "/after.jpg" },
 ];
 
 const Index = () => {
