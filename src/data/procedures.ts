@@ -4,7 +4,7 @@ import procBioestimulador from "@/assets/proc-bioestimulador.webp";
 import procUltraformer from "@/assets/proc-ultraformer.webp";
 import procLavieen from "@/assets/proc-lavieen.webp";
 import procLimpeza from "@/assets/proc-limpeza.webp";
-import procPeelingProfundo from "@assets/procPeelingProfundo.jpeg:;
+import procPeelingProfundo from "@/assets/procPeelingProfundo.jpeg";
 
 export interface Procedure {
   id: string;
