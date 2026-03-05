@@ -4,6 +4,7 @@ import procBioestimulador from "@/assets/proc-bioestimulador.webp";
 import procUltraformer from "@/assets/proc-ultraformer.webp";
 import procLavieen from "@/assets/proc-lavieen.webp";
 import procLimpeza from "@/assets/proc-limpeza.webp";
+import procPeelingProfundo from "@assets/procPeelingProfundo.jpeg:;
 
 export interface Procedure {
   id: string;
@@ -30,6 +31,22 @@ export const procedures: Procedure[] = [
     image: procToxina,
     icon: "Sparkles",
   },
+  {
+      id: "peeling-quimico-profundo",
+      title: "Peeling Químico Profundo",
+      summary: "Renovação celular intensa para o tratamento de rugas profundas e textura da pele.",
+      description:
+        "O peeling químico profundo é um procedimento padrão-ouro para o rejuvenescimento facial severo. Ao atingir as camadas mais profundas da derme, ele promove uma reorganização completa das fibras de colágeno, eliminando rugas marcadas, manchas actínicas e cicatrizes. É o tratamento ideal para quem busca um efeito de 'lifting' sem cirurgia, resultando em uma pele nova, firme e com brilho incomparável.",
+      indications: [
+        "Rugas profundas e vincos faciais acentuados",
+        "Fotoenvelhecimento severo (danos solares crônicos)",
+        "Cicatrizes de acne e irregularidades na textura",
+        "Flacidez cutânea moderada",
+      ],
+      image: procPeelingProfundo, // Certifique-se de importar esta imagem
+      icon: "RefreshCw",
+    },
+  
   {
     id: "preenchimento-acido-hialuronico",
     title: "Preenchimento com Ácido Hialurônico",
