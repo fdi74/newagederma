@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/5547991549098?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
@@ -42,6 +43,9 @@ const Navbar = () => {
           <a href="#depoimentos" className="font-body text-sm text-cream/70 hover:text-teal transition-colors">
             Depoimentos
           </a>
+          <Link to="/lift-diamond" className="font-body text-sm text-teal-light hover:text-teal transition-colors">
+            Lift Diamond
+          </Link>
           <a
             href={WHATSAPP_LINK}
             target="_blank"
@@ -79,6 +83,9 @@ const Navbar = () => {
           <a href="#depoimentos" onClick={() => setMenuOpen(false)} className="font-body text-cream/80 hover:text-teal transition-colors">
             Depoimentos
           </a>
+          <Link to="/lift-diamond" onClick={() => setMenuOpen(false)} className="font-body text-teal-light hover:text-teal transition-colors">
+            Lift Diamond
+          </Link>
           <a
             href={WHATSAPP_LINK}
             target="_blank"
