@@ -55,9 +55,9 @@ const LiftDiamond = () => {
         .ld-step-desc { font-size: 13px; color: #666; line-height: 1.8; font-weight: 300; }
 
         .ld-tech-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .ld-laser-wrap { display: flex; justify-content: center; align-items: center; background: #1a2e25; border-radius: 20px; padding: 48px; min-height: 400px; position: relative; overflow: hidden; }
+        .ld-laser-wrap { display: flex; justify-content: center; align-items: center; background: #1a2e25; border-radius: 20px; padding: 64px 48px; min-height: 460px; position: relative; overflow: visible; }
         .ld-laser-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(78,205,196,0.08), transparent 70%); }
-        .ld-laser-wrap img { max-height: 380px; width: auto; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
+        .ld-laser-wrap img { max-height: 300px; width: auto; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
         .ld-tech-list { display: flex; flex-direction: column; margin-top: 28px; }
         .ld-tech-item { display: flex; gap: 16px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
         .ld-tech-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
