@@ -214,7 +214,7 @@ const LiftDiamond = () => {
         <div className="ld-section-inner">
           <div className="ld-tech-layout">
             <div className="ld-laser-wrap">
-              <img src="/SmartXIDE Punto.png" alt="Laser SmartXIDE Punto DEKA" />
+              <img src="/laser c02.png" alt="Laser SmartXIDE Punto DEKA" />
             </div>
             <div>
               <span className="ld-label">A tecnologia</span>
@@ -248,22 +248,14 @@ const LiftDiamond = () => {
           <p className="ld-subtitle ld-subtitle-lt">Resultados de pacientes tratados com o protocolo Lift Diamond.</p>
           <div className="ld-ad-grid">
             {[
-              { title: "Cicatriz de Acne", desc: "Caso 1", img: "IMG_1974 3.jpg" },
-              { title: "Cicatriz de Acne", desc: "IMG_1970 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "IMG_1971 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "IMG_1972 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "IMG_1973 2.jpg" },
+              { title: "Cicatriz de Acne", desc: "Caso 1" },
+              { title: "Cicatriz de Acne", desc: "Caso 2" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 1" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 2" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 3" },
             ].map((ad, i) => (
               <div key={`${ad.title}-${i}`} className="ld-ad-card">
-                {ad.img ? (
-                  <img
-                    src={ad.img}
-                    alt={`${ad.title} - ${ad.desc}`}
-                    style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
-                  />
-                ) : (
-                  <div className="ld-ad-slot-single"><span className="icon">📷</span><span className="txt">Aguardando foto</span></div>
-                )}
+                <div className="ld-ad-slot-single"><span className="icon">📷</span><span className="txt">Aguardando foto</span></div>
                 <div className="ld-ad-info">
                   <div className="ld-ad-title">{ad.title}</div>
                   <div className="ld-ad-desc">{ad.desc}</div>
