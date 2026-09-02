@@ -55,6 +55,7 @@ const LiftDiamond = () => {
         .ld-step-desc { font-size: 13px; color: #666; line-height: 1.8; font-weight: 300; }
 
         .ld-tech-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .ld-tech-layout-noimg { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; }
         .ld-laser-wrap { display: flex; justify-content: center; align-items: center; background: #1a2e25; border-radius: 20px; padding: 64px 48px; min-height: 460px; position: relative; overflow: visible; }
         .ld-laser-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(78,205,196,0.08), transparent 70%); }
         .ld-laser-wrap img { max-height: 300px; width: auto; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
@@ -208,10 +209,7 @@ const LiftDiamond = () => {
       {/* TECNOLOGIA */}
       <div className="ld-section-dark">
         <div className="ld-section-inner">
-          <div className="ld-tech-layout">
-            <div className="ld-laser-wrap">
-              <img src="/SmartXIDE Punto.png" alt="Laser SmartXIDE Punto DEKA" />
-            </div>
+          <div className="ld-tech-layout ld-tech-layout-noimg">
             <div>
               <span className="ld-label">A tecnologia</span>
               <h2 className="ld-title">Laser CO2 <em>SmartXIDE</em><br />Punto DEKA</h2>
