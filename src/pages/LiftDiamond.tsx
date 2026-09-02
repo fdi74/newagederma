@@ -10,7 +10,7 @@ const LiftDiamond = () => {
 
       <style>{`
         .ld-nav { padding: 14px 48px; display: flex; align-items: center; justify-content: space-between; background: #172219; position: sticky; top: 0; z-index: 100; }
-        .ld-nav-logo img { height: 48px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
+        .ld-nav-logo img { height: 48px; width: auto; object-fit: contain; }
         .ld-nav-links { display: flex; gap: 36px; }
         .ld-nav-link { font-size: 14px; color: #8a9e97; text-decoration: none; transition: color 0.2s; }
         .ld-nav-link:hover { color: #f0ede8; }
@@ -89,7 +89,7 @@ const LiftDiamond = () => {
 
         .ld-cta { display: grid; grid-template-columns: 1fr 1fr; background: #172219; }
         .ld-cta-photo { min-height: 460px; background: #1a2e25; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .ld-cta-photo img { width: 70%; opacity: 0.35; filter: brightness(0) invert(1); }
+        .ld-cta-photo img { width: 70%; opacity: 0.5; }
         .ld-cta-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
         .ld-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; color: #f0ede8; line-height: 1.1; margin-bottom: 20px; }
         .ld-cta-title em { font-style: italic; color: #4ecdc4; }
@@ -99,7 +99,7 @@ const LiftDiamond = () => {
         .ld-cta-note { font-size: 11px; color: #8a9e97; margin-top: 14px; opacity: 0.6; }
 
         .ld-footer { background: #0d1510; padding: 36px 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .ld-footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; }
+        .ld-footer-logo img { height: 36px; width: auto; opacity: 0.85; }
         .ld-footer-links { display: flex; gap: 28px; }
         .ld-footer-link { font-size: 11px; color: #3a5047; text-decoration: none; transition: color 0.2s; letter-spacing: 1px; }
         .ld-footer-link:hover { color: #4ecdc4; }
@@ -123,7 +123,7 @@ const LiftDiamond = () => {
         <div className="ld-nav-logo">
           <a href="/">
             <img
-              src="/new_age_derma_fundo_transparente_ads_2049_x_1152_px___2049_x_1152_px_-2-removebg-preview.png"
+              src="/logo-white-teal.png"
               alt="New Age Derma"
             />
           </a>
@@ -151,7 +151,7 @@ const LiftDiamond = () => {
           <div className="ld-hero-stats">
             <div className="ld-stat">
               <div className="ld-stat-icon">⏱</div>
-              <div className="ld-stat-num">6</div>
+              <div className="ld-stat-num">3-6</div>
               <div className="ld-stat-label">meses de programa</div>
             </div>
             <div className="ld-stat">
@@ -183,7 +183,7 @@ const LiftDiamond = () => {
           <div className="ld-steps-grid">
             {[
               { icon: "🔍", num: "Etapa 01", title: "Avaliação Personalizada", desc: "Consulta detalhada com o Dr. Fabricio para mapear as necessidades da sua pele e definir o protocolo ideal." },
-              { icon: "⚡", num: "Etapa 02", title: "Laser CO2 Ultrafracionado", desc: "SmartXIDE Punto DEKA com Cool Touch. Mínimo desconforto, sem crostas e retração imediata visível." },
+              { icon: "⚡", num: "Etapa 02", title: "Laser CO2 Ultrafracionado", desc: "SmartXIDE Punto DEKA com Cool Peel. Mínimo desconforto, sem crostas e retração imediata visível." },
               { icon: "🔬", num: "Etapa 03", title: "Exossomos por Drug Delivery", desc: "Aplicados imediatamente após o laser para potencializar a regeneração e acelerar a recuperação." },
               { icon: "📅", num: "Etapa 04", title: "3 a 6 Meses de Acompanhamento", desc: "Protocolo domiciliar exclusivo e revisões periódicas ao longo do programa para maximizar e manter os resultados." },
             ].map((s) => (
@@ -208,7 +208,7 @@ const LiftDiamond = () => {
             <div>
               <span className="ld-label">A tecnologia</span>
               <h2 className="ld-title">Laser CO2 <em>SmartXIDE</em><br />Punto DEKA</h2>
-              <p className="ld-subtitle ld-subtitle-lt">Pulso ultrafracionado com ponteira Cool Touch para máxima eficácia com mínimo desconforto.</p>
+              <p className="ld-subtitle ld-subtitle-lt">Pulso ultrafracionado com ponteira Cool Peel para máxima eficácia com mínimo desconforto.</p>
               <div className="ld-tech-list">
                 {[
                   { title: "Pulso ultrafracionado preciso", desc: "Microestímulos controlados sem agressão superficial — sem crostas, recuperação confortável." },
@@ -287,7 +287,7 @@ const LiftDiamond = () => {
       <div className="ld-cta">
         <div className="ld-cta-photo">
           <img
-            src="/new_age_derma_fundo_transparente_ads_2049_x_1152_px___2049_x_1152_px_-2-removebg-preview.png"
+            src="/logo-white-teal.png"
             alt="New Age Derma"
           />
         </div>
@@ -306,7 +306,7 @@ const LiftDiamond = () => {
       <footer className="ld-footer">
         <div className="ld-footer-logo">
           <img
-            src="/new_age_derma_fundo_transparente_ads_2049_x_1152_px___2049_x_1152_px_-2-removebg-preview.png"
+            src="/logo-white-teal.png"
             alt="New Age Derma"
           />
         </div>
