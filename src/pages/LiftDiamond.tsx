@@ -72,6 +72,9 @@ const LiftDiamond = () => {
         .ld-ad-slot { width: 100%; height: 220px; background: #243028; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
         .ld-ad-slot span.icon { font-size: 28px; }
         .ld-ad-slot span.txt { font-size: 10px; letter-spacing: 2px; color: #3a5047; text-transform: uppercase; }
+        .ld-ad-slot-single { width: 100%; height: 280px; background: #243028; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+        .ld-ad-slot-single span.icon { font-size: 32px; }
+        .ld-ad-slot-single span.txt { font-size: 10px; letter-spacing: 2px; color: #3a5047; text-transform: uppercase; }
         .ld-ad-images img { width: 100%; height: 220px; object-fit: cover; display: block; }
         .ld-ad-labels { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
         .ld-ad-lbl { text-align: center; padding: 8px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
@@ -245,19 +248,14 @@ const LiftDiamond = () => {
           <p className="ld-subtitle ld-subtitle-lt">Resultados de pacientes tratados com o protocolo Lift Diamond.</p>
           <div className="ld-ad-grid">
             {[
-              { title: "Rejuvenescimento facial", desc: "Redução de rugas e melhora da textura" },
-              { title: "Firmeza e lifting", desc: "Retração e estímulo de colágeno" },
-              { title: "Uniformização do tom", desc: "Redução de manchas e poros" },
-            ].map((ad) => (
-              <div key={ad.title} className="ld-ad-card">
-                <div className="ld-ad-images">
-                  <div className="ld-ad-slot"><span className="icon">📷</span><span className="txt">Antes</span></div>
-                  <div className="ld-ad-slot"><span className="icon">✨</span><span className="txt">Depois</span></div>
-                </div>
-                <div className="ld-ad-labels">
-                  <div className="ld-ad-lbl ld-ad-lbl-a">Antes</div>
-                  <div className="ld-ad-lbl ld-ad-lbl-d">Depois</div>
-                </div>
+              { title: "Cicatriz de Acne", desc: "Caso 1" },
+              { title: "Cicatriz de Acne", desc: "Caso 2" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 1" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 2" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 3" },
+            ].map((ad, i) => (
+              <div key={`${ad.title}-${i}`} className="ld-ad-card">
+                <div className="ld-ad-slot-single"><span className="icon">📷</span><span className="txt">Aguardando foto</span></div>
                 <div className="ld-ad-info">
                   <div className="ld-ad-title">{ad.title}</div>
                   <div className="ld-ad-desc">{ad.desc}</div>
