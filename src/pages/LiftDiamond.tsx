@@ -88,8 +88,14 @@ const LiftDiamond = () => {
         .ld-result-desc { font-size: 13px; color: #666; line-height: 1.8; font-weight: 300; }
 
         .ld-cta { display: grid; grid-template-columns: 1fr 1fr; background: #172219; }
-        .ld-cta-photo { min-height: 460px; background: #1a2e25; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .ld-cta-photo img { width: 70%; opacity: 0.5; }
+        .ld-cta-photo { min-height: 460px; background: #1a2e25; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 40px; }
+        .ld-cta-locations { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 380px; }
+        .ld-location-card { display: flex; align-items: center; gap: 16px; padding: 22px 24px; border: 1px solid rgba(78,205,196,0.25); border-radius: 12px; background: rgba(78,205,196,0.04); text-decoration: none; transition: all 0.3s ease; }
+        .ld-location-card:hover { border-color: #4ecdc4; background: rgba(78,205,196,0.09); transform: translateY(-2px); }
+        .ld-location-pin { font-size: 22px; flex-shrink: 0; }
+        .ld-location-info { display: flex; flex-direction: column; gap: 4px; }
+        .ld-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: #f0ede8; }
+        .ld-location-address { font-size: 12.5px; color: #8a9e97; font-weight: 300; line-height: 1.5; }
         .ld-cta-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
         .ld-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; color: #f0ede8; line-height: 1.1; margin-bottom: 20px; }
         .ld-cta-title em { font-style: italic; color: #4ecdc4; }
@@ -112,7 +118,8 @@ const LiftDiamond = () => {
           .ld-section-light, .ld-section-dark, .ld-section-mid { padding: 60px 24px; }
           .ld-tech-layout { grid-template-columns: 1fr; }
           .ld-cta { grid-template-columns: 1fr; }
-          .ld-cta-photo { display: none; }
+          .ld-cta-photo { min-height: 0; padding: 40px 24px; }
+          .ld-cta-locations { max-width: 100%; }
           .ld-cta-text { padding: 60px 24px; }
           .ld-footer { padding: 28px 24px; flex-direction: column; text-align: center; }
         }
@@ -286,10 +293,32 @@ const LiftDiamond = () => {
       {/* CTA */}
       <div className="ld-cta">
         <div className="ld-cta-photo">
-          <img
-            src="/logo-white-teal.png"
-            alt="New Age Derma"
-          />
+          <div className="ld-cta-locations">
+            <a
+              href="https://maps.app.goo.gl/ZGymksmYAyDT7ZWD7?g_st=ic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ld-location-card"
+            >
+              <span className="ld-location-pin">📍</span>
+              <span className="ld-location-info">
+                <span className="ld-location-name">Balneário Camboriú</span>
+                <span className="ld-location-address">Rua Miguel Matte, 687 – Sala 1605, Pioneiros</span>
+              </span>
+            </a>
+            <a
+              href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x94dce73545caf83b:0x43bdb9a5dab2fcc7?entry=s&sa=X&ved=2ahUKEwi1tdyTtP2VAxVQlZUCHTGjFIkQ4kB6BAgDEAA&hl=pt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ld-location-card"
+            >
+              <span className="ld-location-pin">📍</span>
+              <span className="ld-location-info">
+                <span className="ld-location-name">Curitiba</span>
+                <span className="ld-location-address">Av. Anita Garibaldi, 850 – Sala 601/602, Cabral</span>
+              </span>
+            </a>
+          </div>
         </div>
         <div className="ld-cta-text">
           <span className="ld-label">Agende sua avaliação</span>
