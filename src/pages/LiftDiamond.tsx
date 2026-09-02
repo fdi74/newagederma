@@ -250,9 +250,9 @@ const LiftDiamond = () => {
             {[
               { title: "Cicatriz de Acne", desc: "Caso 1", img: "IMG_1974 3.jpg" },
               { title: "Cicatriz de Acne", desc: "IMG_1970 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 1" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 2" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 3" },
+              { title: "Rejuvenescimento Avançado", desc: "IMG_1971 2.jpg" },
+              { title: "Rejuvenescimento Avançado", desc: "IMG_1972 2.jpg" },
+              { title: "Rejuvenescimento Avançado", desc: "IMG_1973 2.jpg" },
             ].map((ad, i) => (
               <div key={`${ad.title}-${i}`} className="ld-ad-card">
                 {ad.img ? (
