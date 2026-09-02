@@ -10,16 +10,14 @@ const LiftDiamond = () => {
 
       <style>{`
         .ld-nav { padding: 14px 48px; display: flex; align-items: center; justify-content: space-between; background: #172219; position: sticky; top: 0; z-index: 100; }
-        .ld-nav-logo img { height: 48px; width: auto; object-fit: contain; }
+        .ld-nav-logo img { height: 48px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
         .ld-nav-links { display: flex; gap: 36px; }
         .ld-nav-link { font-size: 14px; color: #8a9e97; text-decoration: none; transition: color 0.2s; }
         .ld-nav-link:hover { color: #f0ede8; }
         .ld-btn-nav { display: flex; align-items: center; gap: 8px; background: #4ecdc4; color: #111; padding: 12px 24px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 
-        .ld-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 92vh; background: #1c2b26; }
-        .ld-hero-photo { position: relative; overflow: hidden; min-height: 500px; background: linear-gradient(135deg, #1a3028, #0d1a14); display: flex; align-items: center; justify-content: center; }
-        .ld-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, transparent, #1c2b26 95%); }
-        .ld-hero-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+        .ld-hero { display: flex; align-items: center; justify-content: center; min-height: 92vh; background: #1c2b26; padding: 0 60px; }
+        .ld-hero-text { max-width: 720px; width: 100%; padding: 80px 0; display: flex; flex-direction: column; justify-content: center; }
         .ld-hero-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #4ecdc4; font-weight: 500; margin-bottom: 20px; display: block; }
         .ld-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 7vw, 90px); font-weight: 400; line-height: 0.95; margin-bottom: 24px; color: #f0ede8; }
         .ld-hero-title em { font-style: italic; color: #4ecdc4; }
@@ -91,7 +89,7 @@ const LiftDiamond = () => {
 
         .ld-cta { display: grid; grid-template-columns: 1fr 1fr; background: #172219; }
         .ld-cta-photo { min-height: 460px; background: #1a2e25; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .ld-cta-photo img { width: 70%; opacity: 0.15; filter: brightness(0) invert(1); }
+        .ld-cta-photo img { width: 70%; opacity: 0.35; filter: brightness(0) invert(1); }
         .ld-cta-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
         .ld-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; color: #f0ede8; line-height: 1.1; margin-bottom: 20px; }
         .ld-cta-title em { font-style: italic; color: #4ecdc4; }
@@ -101,7 +99,7 @@ const LiftDiamond = () => {
         .ld-cta-note { font-size: 11px; color: #8a9e97; margin-top: 14px; opacity: 0.6; }
 
         .ld-footer { background: #0d1510; padding: 36px 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .ld-footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.5; }
+        .ld-footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; }
         .ld-footer-links { display: flex; gap: 28px; }
         .ld-footer-link { font-size: 11px; color: #3a5047; text-decoration: none; transition: color 0.2s; letter-spacing: 1px; }
         .ld-footer-link:hover { color: #4ecdc4; }
@@ -109,9 +107,8 @@ const LiftDiamond = () => {
         @media (max-width: 768px) {
           .ld-nav { padding: 14px 20px; }
           .ld-nav-links { display: none; }
-          .ld-hero { grid-template-columns: 1fr; }
-          .ld-hero-photo { min-height: 200px; }
-          .ld-hero-text { padding: 48px 24px; }
+          .ld-hero { padding: 0 24px; }
+          .ld-hero-text { padding: 48px 0; }
           .ld-section-light, .ld-section-dark, .ld-section-mid { padding: 60px 24px; }
           .ld-tech-layout { grid-template-columns: 1fr; }
           .ld-cta { grid-template-columns: 1fr; }
@@ -143,16 +140,6 @@ const LiftDiamond = () => {
 
       {/* HERO */}
       <div className="ld-hero">
-        <div className="ld-hero-photo">
-          <div className="ld-hero-overlay" />
-          <svg width="400" height="400" viewBox="0 0 100 100" fill="none" style={{ opacity: 0.06, position: "absolute" }}>
-            <circle cx="50" cy="50" r="8" stroke="#4ecdc4" strokeWidth="1" fill="none"/>
-            <path d="M50 34C41,34 34,41 34,50C34,60 41,67 50,67C59,67 66,60 66,50C66,41 59,34 50,34" stroke="#4ecdc4" strokeWidth="1" fill="none"/>
-            <path d="M50 24C36,24 24,36 24,50C24,64 36,76 50,76C64,76 76,64 76,50C76,36 64,24 50,24" stroke="#4ecdc4" strokeWidth="1" fill="none"/>
-            <path d="M50 14C31,14 14,31 14,50C14,69 31,86 50,86C69,86 86,69 86,50C86,31 69,14 50,14" stroke="#4ecdc4" strokeWidth="0.8" fill="none" strokeDasharray="3 2"/>
-            <path d="M50 4C25,4 4,25 4,50C4,75 25,96 50,96C75,96 96,75 96,50C96,25 75,4 50,4" stroke="#4ecdc4" strokeWidth="0.6" fill="none" strokeDasharray="2 3"/>
-          </svg>
-        </div>
         <div className="ld-hero-text">
           <span className="ld-hero-label">DR. FABRICIO DALL'IGNA — NEW AGE DERMA</span>
           <h1 className="ld-hero-title">
@@ -198,7 +185,7 @@ const LiftDiamond = () => {
               { icon: "🔍", num: "Etapa 01", title: "Avaliação Personalizada", desc: "Consulta detalhada com o Dr. Fabricio para mapear as necessidades da sua pele e definir o protocolo ideal." },
               { icon: "⚡", num: "Etapa 02", title: "Laser CO2 Ultrafracionado", desc: "SmartXIDE Punto DEKA com Cool Touch. Mínimo desconforto, sem crostas e retração imediata visível." },
               { icon: "🔬", num: "Etapa 03", title: "Exossomos por Drug Delivery", desc: "Aplicados imediatamente após o laser para potencializar a regeneração e acelerar a recuperação." },
-              { icon: "📅", num: "Etapa 04", title: "6 Meses de Acompanhamento", desc: "Protocolo domiciliar exclusivo e revisões periódicas para maximizar e manter os resultados." },
+              { icon: "📅", num: "Etapa 04", title: "3 a 6 Meses de Acompanhamento", desc: "Protocolo domiciliar exclusivo e revisões periódicas ao longo do programa para maximizar e manter os resultados." },
             ].map((s) => (
               <div key={s.num} className="ld-step-card">
                 <div className="ld-step-icon">{s.icon}</div>
@@ -278,7 +265,7 @@ const LiftDiamond = () => {
         <div className="ld-section-inner">
           <span className="ld-label">O que você vai conquistar</span>
           <h2 className="ld-title ld-title-dk">Resultados <em>progressivos</em> e naturais</h2>
-          <p className="ld-subtitle ld-subtitle-dk">Ao longo dos 6 meses de programa, sua pele se transforma de dentro para fora.</p>
+          <p className="ld-subtitle ld-subtitle-dk">Ao longo dos 3 a 6 meses de programa, sua pele se transforma de dentro para fora.</p>
           <div className="ld-results-grid">
             {[
               { title: "Textura Renovada", desc: "Pele mais lisa, macia e visivelmente renovada já nas primeiras semanas." },
@@ -306,7 +293,7 @@ const LiftDiamond = () => {
         </div>
         <div className="ld-cta-text">
           <span className="ld-label">Agende sua avaliação</span>
-          <h2 className="ld-cta-title">Pronta para <em>transformar</em> sua pele?</h2>
+          <h2 className="ld-cta-title">Conheça o <em>futuro</em> da sua pele</h2>
           <p className="ld-cta-desc">Avaliação personalizada com o Dr. Fabricio Dall'Igna em Balneário Camboriú. Descubra se o Protocolo Lift Diamond é ideal para você.</p>
           <a href={whatsappUrl} className="ld-btn-cta" target="_blank" rel="noopener noreferrer">
             💬 Agendar via WhatsApp
