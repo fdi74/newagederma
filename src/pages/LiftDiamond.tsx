@@ -248,7 +248,7 @@ const LiftDiamond = () => {
           <p className="ld-subtitle ld-subtitle-lt">Resultados de pacientes tratados com o protocolo Lift Diamond.</p>
           <div className="ld-ad-grid">
             {[
-              { title: "Cicatriz de Acne", desc: "Caso 1", img: "/image.jpg" },
+              { title: "Cicatriz de Acne", desc: "Caso 1", img: "public/IMG_1974 3.jpg" },
               { title: "Cicatriz de Acne", desc: "Caso 2" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 1" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 2" },
