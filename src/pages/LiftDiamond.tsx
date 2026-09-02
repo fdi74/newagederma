@@ -212,10 +212,7 @@ const LiftDiamond = () => {
       {/* TECNOLOGIA */}
       <div className="ld-section-dark">
         <div className="ld-section-inner">
-          <div className="ld-tech-layout">
-            <div className="ld-laser-wrap">
-              <img src="/laser c02.png" alt="Laser SmartXIDE Punto DEKA" />
-            </div>
+          <div className="ld-tech-layout ld-tech-layout-noimg">
             <div>
               <span className="ld-label">A tecnologia</span>
               <h2 className="ld-title">Laser CO2 <em>SmartXIDE</em><br />Punto DEKA</h2>
