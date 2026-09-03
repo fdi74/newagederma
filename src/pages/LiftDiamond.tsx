@@ -253,7 +253,7 @@ const LiftDiamond = () => {
               { title: "Cicatriz de Acne", desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.jpg" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 4", img: "/lift-diamond-resultado-4.jpg" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 5", img: "/lift-diamond-resultado-5.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 6", img: "/lift-diamond-resultado-6.jpg" },
+              { title: "Cicatriz de Acne", desc: "Caso 6", img: "/Cicatriz de Acne" },
             ].map((ad, i) => (
             <div key={`${ad.title}-${i}`} className="ld-ad-card">
               {ad.img ? ( 
