@@ -271,8 +271,11 @@ const LiftDiamond = () => {
       </div>
    </div>
         ))}       
-            </div> 
-               {/* RESULTADOS */}
+            </div>
+          </div>
+        </div>
+
+      {/* RESULTADOS */}
       <div className="ld-section-light">
         <div className="ld-section-inner">
           <span className="ld-label">O que você vai conquistar</span>
