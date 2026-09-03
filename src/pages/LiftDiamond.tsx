@@ -250,6 +250,10 @@ const LiftDiamond = () => {
               { title: "Rejuvenescimento Avançado", desc: "Caso 1", img: "/IMG_1971 2.jpg" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 2", img: "/IMG_1972 2.jpg" },
               { title: "Rejuvenescimento Avançado", desc: "Caso 3", img: "/IMG_1973 2.jpg" },
+              { title: "Cicatriz de Acne", desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.jpg" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 4", img: "/lift-diamond-resultado-4.jpg" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 5", img: "/lift-diamond-resultado-5.jpg" },
+              { title: "Rejuvenescimento Avançado", desc: "Caso 6", img: "/lift-diamond-resultado-6.jpg" },
             ].map((ad, i) => (
             <div key={`${ad.title}-${i}`} className="ld-ad-card">
               {ad.img ? ( 
