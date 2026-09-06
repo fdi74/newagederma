@@ -1,8 +1,8 @@
 import procToxina from "@/assets/proc-toxina.webp";
 import procPreenchimento from "@/assets/proc-preenchimento.webp";
-import procUltraformer from "@/assets/proc-ultraformer.webp";
 import procPeelingProfundo from "@/assets/procPeelingProfundo.jpeg";
 import procPeelingGlicolico from "@/assets/peeling-glicolico-resultado.jpg";
+import procSubcisao from "@/assets/subcisao-celulite-resultado.jpg";
 
 export interface Procedure {
   id: string;
@@ -85,7 +85,7 @@ export const procedures: Procedure[] = [
       "Celulite com sulcos e retrações visíveis",
       "Depressões localizadas em glúteos e coxas",
     ],
-    image: procUltraformer,
+    image: procSubcisao,
     icon: "Waves",
   },
 ];
