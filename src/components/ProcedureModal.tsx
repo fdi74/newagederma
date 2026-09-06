@@ -24,8 +24,8 @@ const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModalProps) 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl p-0 overflow-hidden border-border bg-card">
-        <div className="relative h-56">
-          <img src={procedure.image} alt={procedure.title} className="w-full h-full object-cover" />
+        <div className="relative h-64 bg-black">
+          <img src={procedure.image} alt={procedure.title} className="w-full h-full object-contain" />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
           <div className="absolute bottom-5 left-6 flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-primary/15 backdrop-blur-sm flex items-center justify-center border border-primary/30">
