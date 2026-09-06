@@ -1,6 +1,5 @@
 import procToxina from "@/assets/proc-toxina.webp";
 import procPreenchimento from "@/assets/proc-preenchimento.webp";
-import procBioestimulador from "@/assets/proc-bioestimulador.webp";
 import procUltraformer from "@/assets/proc-ultraformer.webp";
 import procLavieen from "@/assets/proc-lavieen.webp";
 import procLimpeza from "@/assets/proc-limpeza.webp";
@@ -61,20 +60,6 @@ export const procedures: Procedure[] = [
     ],
     image: procPreenchimento,
     icon: "Droplets",
-  },
-  {
-    id: "bioestimuladores-colageno",
-    title: "Bioestimuladores de Colágeno",
-    summary: "Tratamento avançado para combater a flacidez e restaurar a firmeza da pele.",
-    description:
-      "Os bioestimuladores são substâncias injetáveis que ativam os fibroblastos — células responsáveis pela produção de colágeno. O tratamento promove uma renovação gradual e duradoura, melhorando a textura, a firmeza e a qualidade geral da pele ao longo de semanas e meses.",
-    indications: [
-      "Flacidez facial e corporal",
-      "Perda de contorno e definição",
-      "Melhora global da qualidade da pele",
-    ],
-    image: procBioestimulador,
-    icon: "Dna",
   },
 
 ];
