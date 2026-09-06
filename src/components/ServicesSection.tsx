@@ -6,12 +6,14 @@ const services = [
     icon: Scissors,
     title: "Dermatologia Cirúrgica",
     description:
-      "Procedimentos para remoção ou cauterização de lesões benignas como verrugas, pintas e calosidades. Cirurgia de cisto sebáceo, lipoma, corpo estranho e cantoplastia (unha encravada). Cirurgia para cânceres de pele com ou sem retalhos ou enxertos — priorizando segurança, resolução da patologia e resultado estético.",
+      "Procedimentos para remoção ou cauterização de lesões benignas como verrugas, pintas e calosidades. Cirurgia de cisto sebáceo, lipoma, corpo estranho e cantoplastia (unha encravada). Cirurgia para cânceres de pele com ou sem retalhos ou enxertos, biópsias para diagnóstico e reparo de lóbulo de orelha — priorizando segurança, resolução da patologia e resultado estético.",
     highlights: [
       "Remoção de verrugas, pintas e calosidades",
       "Cisto sebáceo, lipoma e corpo estranho",
       "Cantoplastia (unha encravada)",
       "Cirurgia oncológica com retalhos e enxertos",
+      "Biópsia de pele para diagnóstico",
+      "Reparo de lóbulo de orelha",
     ],
   },
   {
