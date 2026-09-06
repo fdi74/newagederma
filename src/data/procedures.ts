@@ -1,8 +1,8 @@
 import procToxina from "@/assets/proc-toxina.webp";
-import procPreenchimento from "@/assets/proc-preenchimento.webp";
 import procPeelingProfundo from "@/assets/procPeelingProfundo.jpeg";
 import procPeelingGlicolico from "@/assets/peeling-glicolico-resultado.jpg";
 import procSubcisao from "@/assets/subcisao-celulite-resultado.jpg";
+import procBioplastia from "@/assets/bioplastia-1.jpg";
 
 export interface Procedure {
   id: string;
@@ -42,7 +42,7 @@ export const procedures: Procedure[] = [
       "Maçãs do rosto e projeção malar",
       "Harmonização facial completa (rosto como um todo, não pontos isolados)",
     ],
-    image: procPreenchimento,
+    image: procBioplastia,
     icon: "Droplets",
   },
   {
