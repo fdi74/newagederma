@@ -284,8 +284,7 @@ cases: [
 {
 treatment: "Peeling Químico",
 cases: [
-{ desc: "Caso 4", img: "/lift-diamond-resultado-4.jpg" },
-{ desc: "Caso 5", img: "/lift-diamond-resultado-5.jpg" },
+{ desc: "Caso 4", img: "/lift-diamond-resultado-5.jpg" },
 ],
 },
 ],
