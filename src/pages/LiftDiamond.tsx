@@ -66,7 +66,11 @@ const LiftDiamond = () => {
         .ld-tech-item-title { font-size: 14px; font-weight: 500; color: #f0ede8; margin-bottom: 5px; }
         .ld-tech-item-desc { font-size: 13px; color: #8a9e97; line-height: 1.7; font-weight: 300; }
 
-        .ld-ad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 52px; }
+        .ld-ad-category { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 500; color: #f0ede8; margin: 56px 0 20px; }
+        .ld-ad-category:first-of-type { margin-top: 40px; }
+        .ld-ad-treatment { margin-bottom: 32px; }
+        .ld-ad-treatment-label { display: inline-block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #4ecdc4; font-weight: 600; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid rgba(78,205,196,0.25); }
+        .ld-ad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 0; }
         .ld-ad-card { background: #172219; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
         .ld-ad-images { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
         .ld-ad-slot { width: 100%; height: 220px; background: #243028; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
@@ -242,38 +246,78 @@ const LiftDiamond = () => {
         <div className="ld-section-inner">
           <span className="ld-label">Resultados reais</span>
           <h2 className="ld-title">Transformações <em>comprovadas</em></h2>
-          <p className="ld-subtitle ld-subtitle-lt">Resultados de pacientes tratados com o protocolo Lift Diamond.</p>
-          <div className="ld-ad-grid">
-            {[
-              { title: "Cicatriz de Acne", desc: "caso 1", img:  "/IMG_1970 2.jpg" },
-              { title: "Cicatriz de Acne", desc: "Caso 2", img: "/IMG_1974 3.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 1", img: "/IMG_1971 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 2", img: "/IMG_1972 2.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 3", img: "/IMG_1973 2.jpg" },
-              { title: "Cicatriz de Acne", desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 4", img: "/lift-diamond-resultado-4.jpg" },
-              { title: "Rejuvenescimento Avançado", desc: "Caso 5", img: "/lift-diamond-resultado-5.jpg" },
-              { title: "Cicatriz de Acne", desc: "Caso 6", img: "/lift-diamond-resultado-6.jpg" },
-            ].map((ad, i) => (
-            <div key={`${ad.title}-${i}`} className="ld-ad-card">
-              {ad.img ? ( 
-              <img
-              src={ad.img} 
-               alt={`${ad.title} - ${ad.desc}`}
-             style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
-            />
-            ) : (
-         <div className="ld-ad-slot-single"><span className="icon">📷</span><span className="txt">Aguardando foto</span></div>
-        )}
-       <div className="ld-ad-info">
-       <div className="ld-ad-title">{ad.title}</div>
-       <div className="ld-ad-desc">{ad.desc}</div>
-      </div>
-   </div>
-        ))}       
+          <p className="ld-subtitle ld-subtitle-lt">Resultados reais de pacientes, organizados por tipo de queixa e tratamento realizado.</p>
+          {[
+            {
+              category: "Cicatriz de Acne",
+              treatments: [
+                {
+                  treatment: "Lift Diamond",
+                  cases: [
+                    { desc: "Caso 1", img: "/IMG_1970 2.jpg" },
+                    { desc: "Caso 2", img: "/IMG_1974 3.jpg" },
+                  ],
+                },
+                {
+                  treatment: "Peeling Químico",
+                  cases: [
+                    { desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.jpg" },
+                    { desc: "Caso 6", img: "/lift-diamond-resultado-6.jpg" },
+                  ],
+                },
+              ],
+            },
+            {
+              category: "Rejuvenescimento Avançado",
+              treatments: [
+                {
+                  treatment: "Lift Diamond",
+                  cases: [
+                    { desc: "Caso 1", img: "/IMG_1971 2.jpg" },
+                    { desc: "Caso 2", img: "/IMG_1972 2.jpg" },
+                    { desc: "Caso 3", img: "/IMG_1973 2.jpg" },
+                  ],
+                },
+                {
+                  treatment: "Peeling Químico",
+                  cases: [
+                    { desc: "Caso 4", img: "/lift-diamond-resultado-4.jpg" },
+                    { desc: "Caso 5", img: "/lift-diamond-resultado-5.jpg" },
+                  ],
+                },
+              ],
+            },
+          ].map((group) => (
+            <div key={group.category}>
+              <h3 className="ld-ad-category">{group.category}</h3>
+              {group.treatments.map((t) => (
+                <div key={`${group.category}-${t.treatment}`} className="ld-ad-treatment">
+                  <span className="ld-ad-treatment-label">{t.treatment}</span>
+                  <div className="ld-ad-grid">
+                    {t.cases.map((c) => (
+                      <div key={`${group.category}-${t.treatment}-${c.desc}`} className="ld-ad-card">
+                        {c.img ? (
+                          <img
+                            src={c.img}
+                            alt={`${group.category} - ${t.treatment} - ${c.desc}`}
+                            style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
+                          />
+                        ) : (
+                          <div className="ld-ad-slot-single"><span className="icon">📷</span><span className="txt">Aguardando foto</span></div>
+                        )}
+                        <div className="ld-ad-info">
+                          <div className="ld-ad-title">{group.category}</div>
+                          <div className="ld-ad-desc">{t.treatment} · {c.desc}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
+          ))}
         </div>
+      </div>
 
       {/* RESULTADOS */}
       <div className="ld-section-light">
