@@ -31,7 +31,6 @@ const ProcedureCard = ({ procedure, index, onSelect }: ProcedureCardProps) => {
             alt={procedure.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
           <div className="absolute top-4 left-4">
             <div className="w-10 h-10 rounded-full bg-primary/15 backdrop-blur-sm flex items-center justify-center border border-primary/25">
               <Icon className="w-5 h-5 text-primary" />
