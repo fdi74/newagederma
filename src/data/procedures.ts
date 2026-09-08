@@ -10,7 +10,21 @@ export interface Procedure {
   summary: string;
   description: string;
   indications: string[];
+  /** Foto principal (capa do card). */
   image: string;
+  /**
+   * Fotos extras de resultado para esse procedimento (opcional).
+   * Quando houver mais de uma foto (image + gallery), o modal do
+   * procedimento mostra um carrossel com setas para navegar.
+   *
+   * Para adicionar mais fotos no futuro:
+   * 1. Coloque o arquivo de imagem em src/assets/
+   * 2. Importe no topo deste arquivo, ex:
+   *      import procBioplastia2 from "@/assets/bioplastia-2.jpg";
+   * 3. Adicione ao array `gallery` do procedimento correspondente, ex:
+   *      gallery: [procBioplastia2],
+   */
+  gallery?: string[];
   icon: string;
 }
 
