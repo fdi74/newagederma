@@ -281,12 +281,6 @@ cases: [
 { desc: "Caso 3", img: "/IMG_1973 2.jpg" },
 ],
 },
-{
-treatment: "Peeling Químico",
-cases: [
-{ desc: "Caso 4", img: "/lift-diamond-resultado-5.jpg" },
-],
-},
 ],
 },
 ].map((group) => (
