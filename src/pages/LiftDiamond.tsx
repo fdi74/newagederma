@@ -138,7 +138,7 @@ return (
 <div className="ld-nav-logo">
 <a href="/">
 <img
-src="/logo-white-teal.png"
+src="/logo-white-teal.webp"
 alt="New Age Derma"
 />
 </a>
@@ -218,7 +218,7 @@ Programa exclusivo de <strong>3 a 6 meses</strong> com Laser CO2 ultrafracionado
 <div className="ld-section-inner">
 <div className="ld-tech-layout">
 <div className="ld-laser-wrap">
-<img src="/smartxide-punto-deka.png" alt="Laser CO2 SmartXIDE Punto DEKA" />
+<img src="/smartxide-punto-deka.webp" alt="Laser CO2 SmartXIDE Punto DEKA" />
 </div>
 <div>
 <span className="ld-label">A tecnologia</span>
@@ -257,15 +257,15 @@ treatments: [
 {
 treatment: "Lift Diamond",
 cases: [
-{ desc: "Caso 1", img: "/IMG_1970 2.jpg" },
-{ desc: "Caso 2", img: "/IMG_1974 3.jpg" },
+{ desc: "Caso 1", img: "/img-1970.webp" },
+{ desc: "Caso 2", img: "/img-1974.webp" },
 ],
 },
 {
 treatment: "Peeling Químico",
 cases: [
-{ desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.jpg" },
-{ desc: "Caso 6", img: "/lift-diamond-resultado-6.jpg" },
+{ desc: "Caso 3", img: "/lift-diamond-resultado-acne-3.webp" },
+{ desc: "Caso 6", img: "/lift-diamond-resultado-6.webp" },
 ],
 },
 ],
@@ -276,9 +276,9 @@ treatments: [
 {
 treatment: "Lift Diamond",
 cases: [
-{ desc: "Caso 1", img: "/IMG_1971 2.jpg" },
-{ desc: "Caso 2", img: "/IMG_1972 2.jpg" },
-{ desc: "Caso 3", img: "/IMG_1973 2.jpg" },
+{ desc: "Caso 1", img: "/img-1971.webp" },
+{ desc: "Caso 2", img: "/img-1972.webp" },
+{ desc: "Caso 3", img: "/img-1973.webp" },
 ],
 },
 ],
@@ -383,7 +383,7 @@ className="ld-location-card"
 <footer className="ld-footer">
 <div className="ld-footer-logo">
 <img
-src="/logo-white-teal.png"
+src="/logo-white-teal.webp"
 alt="New Age Derma"
 />
 </div>

@@ -11,8 +11,8 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 // 1. Importar as imagens (Aqui você cria um "apelido" para o arquivo)
-import antesFacial from "@/assets/before.jpg";
-import depoisFacial from "@/assets/after.jpg";
+import antesFacial from "@/assets/before.webp";
+import depoisFacial from "@/assets/after.webp";
 
 // 2. Definição dos dados (Use o "apelido" SEM aspas)
 const transformations = [

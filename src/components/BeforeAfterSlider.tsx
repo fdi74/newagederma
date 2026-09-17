@@ -1,8 +1,8 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 
 // Importando suas fotos do WhatsApp
-import fotoAntes from "@/assets/WhatsApp Image 2026-03-05 at 10.02.26.jpeg";
-import fotoDepois from "@/assets/WhatsApp Image 2026-03-05 at 10.02.28.jpeg";
+import fotoAntes from "@/assets/antes-facial.webp";
+import fotoDepois from "@/assets/depois-facial.webp";
 
 interface BeforeAfterSliderProps {
   beforeImage?: string;

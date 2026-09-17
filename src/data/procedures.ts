@@ -1,8 +1,8 @@
 import procToxina from "@/assets/proc-toxina.webp";
-import procPeelingProfundo from "@/assets/peeling-profundo-resultado.jpg";
-import procPeelingGlicolico from "@/assets/peeling-glicolico-resultado.jpg";
-import procSubcisao from "@/assets/subcisao-celulite-resultado.jpg";
-import procBioplastia from "@/assets/bioplastia-resultado.jpg";
+import procPeelingProfundo from "@/assets/peeling-profundo-resultado.webp";
+import procPeelingGlicolico from "@/assets/peeling-glicolico-resultado.webp";
+import procSubcisao from "@/assets/subcisao-celulite-resultado.webp";
+import procBioplastia from "@/assets/bioplastia-resultado.webp";
 
 export interface Procedure {
   id: string;
