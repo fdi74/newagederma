@@ -54,6 +54,25 @@ return (
 .ld-step-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; margin-bottom: 10px; color: #111; }
 .ld-step-desc { font-size: 13px; color: #666; line-height: 1.8; font-weight: 300; }
 
+.ld-plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 52px; align-items: stretch; }
+.ld-plan-card { background: #172219; border-radius: 20px; padding: 40px 32px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; transition: all 0.3s; }
+.ld-plan-card:hover { border-color: #4ecdc4; transform: translateY(-4px); }
+.ld-plan-card-featured { border-color: #4ecdc4; background: #1a2e25; position: relative; }
+.ld-plan-badge { position: absolute; top: -13px; left: 32px; background: #4ecdc4; color: #111; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 6px 14px; border-radius: 50px; }
+.ld-plan-name { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 500; color: #f0ede8; margin-bottom: 6px; }
+.ld-plan-name em { font-style: italic; color: #4ecdc4; }
+.ld-plan-tagline { font-size: 12.5px; color: #8a9e97; font-weight: 300; margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.ld-plan-items { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
+.ld-plan-item { display: flex; gap: 12px; padding: 9px 0; font-size: 13.5px; color: #d8d4cc; font-weight: 300; line-height: 1.6; }
+.ld-plan-item-plus { color: #4ecdc4; font-weight: 500; }
+.ld-plan-check { color: #4ecdc4; flex-shrink: 0; margin-top: 1px; }
+.ld-btn-plan { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid rgba(255,255,255,0.25); color: #f0ede8; padding: 14px 24px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.3s; text-align: center; }
+.ld-btn-plan:hover { border-color: #4ecdc4; color: #4ecdc4; }
+.ld-plan-card-featured .ld-btn-plan { background: #4ecdc4; border-color: #4ecdc4; color: #111; }
+.ld-plan-card-featured .ld-btn-plan:hover { background: #3dbdb5; }
+
+.ld-tech-intro { font-size: 14.5px; line-height: 1.9; color: #c9c5bc; font-weight: 300; max-width: 900px; margin: -12px 0 48px; }
+
 .ld-tech-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .ld-tech-layout-noimg { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; }
 .ld-laser-wrap { display: flex; justify-content: center; align-items: center; background: #1a2e25; border-radius: 20px; padding: 64px 48px; min-height: 460px; position: relative; overflow: visible; }
@@ -161,13 +180,13 @@ alt="New Age Derma"
 Lift<br /><em>Diamond™</em><br />o protocolo<br />completo
 </h1>
 <p className="ld-hero-desc">
-Programa exclusivo de <strong>3 a 6 meses</strong> com Laser CO2 ultrafracionado + exossomos regenerativos. Resultados progressivos, naturais e duradouros.
+Protocolo de regeneração com Laser CO2 ultrafracionado + exossomos regenerativos, com <strong>acompanhamento médico contínuo</strong> do Dr. Fabricio. Resultados progressivos, naturais e duradouros.
 </p>
 <div className="ld-hero-stats">
 <div className="ld-stat">
-<div className="ld-stat-icon">⏱</div>
-<div className="ld-stat-num">3-6</div>
-<div className="ld-stat-label">meses de programa</div>
+<div className="ld-stat-icon">👨‍⚕️</div>
+<div className="ld-stat-num">100%</div>
+<div className="ld-stat-label">acompanhamento médico</div>
 </div>
 <div className="ld-stat">
 <div className="ld-stat-icon">✦</div>
@@ -200,7 +219,7 @@ Programa exclusivo de <strong>3 a 6 meses</strong> com Laser CO2 ultrafracionado
 { icon: "🔍", num: "Etapa 01", title: "Avaliação Personalizada", desc: "Consulta detalhada com o Dr. Fabricio para mapear as necessidades da sua pele e definir o protocolo ideal." },
 { icon: "⚡", num: "Etapa 02", title: "Laser CO2 Ultrafracionado", desc: "SmartXIDE Punto DEKA com Cool Peel. Mínimo desconforto, sem crostas e retração imediata visível." },
 { icon: "🔬", num: "Etapa 03", title: "Exossomos por Drug Delivery", desc: "Aplicados imediatamente após o laser para potencializar a regeneração e acelerar a recuperação." },
-{ icon: "📅", num: "Etapa 04", title: "3 a 6 Meses de Acompanhamento", desc: "Protocolo domiciliar exclusivo e revisões periódicas ao longo do programa para maximizar e manter os resultados." },
+{ icon: "📅", num: "Etapa 04", title: "Acompanhamento Médico Contínuo", desc: "Revisões periódicas com o Dr. Fabricio e protocolo domiciliar personalizado, ajustados conforme a resposta da sua pele para maximizar os resultados." },
 ].map((s) => (
 <div key={s.num} className="ld-step-card">
 <div className="ld-step-icon">{s.icon}</div>
@@ -213,16 +232,82 @@ Programa exclusivo de <strong>3 a 6 meses</strong> com Laser CO2 ultrafracionado
 </div>
 </div>
 
+{/* PROTOCOLOS / PLANOS */}
+<div className="ld-section-mid" id="protocolos">
+<div className="ld-section-inner">
+<span className="ld-label">Escolha seu protocolo</span>
+<h2 className="ld-title">Três níveis, <em>um mesmo</em> padrão de cuidado</h2>
+<p className="ld-subtitle ld-subtitle-lt">Todos os protocolos incluem avaliação médica, plano domiciliar e acompanhamento contínuo com o Dr. Fabricio — a diferença é a extensão do tratamento.</p>
+<div className="ld-plans-grid">
+{[
+{
+name: "Lift Diamond",
+tagline: "Protocolo essencial de regeneração",
+items: [
+"Consulta de avaliação com o Dr. Fabricio",
+"Plano de cuidados domiciliar personalizado",
+"Peeling de preparo",
+"1 sessão de Laser CO2 SmartXIDE Punto + exossomos regenerativos",
+"Acompanhamento médico contínuo",
+],
+featured: false,
+},
+{
+name: "Lift Diamond Gold",
+tagline: "Mais cobertura para resultados ampliados",
+items: [
+"Tudo do protocolo Lift Diamond",
+"2 sessões de Laser CO2 + exossomos (ou 2 áreas tratadas)",
+],
+featured: true,
+},
+{
+name: "Lift Diamond VIP",
+tagline: "Protocolo completo, resultados abrangentes",
+items: [
+"Tudo do protocolo Lift Diamond Gold",
+"+ 2 peelings superficiais",
+"+ 2 aplicações de Toxina Botulínica",
+"+ 3ml de Preenchimento com Ácido Hialurônico",
+],
+featured: false,
+},
+].map((plan) => (
+<div key={plan.name} className={`ld-plan-card ${plan.featured ? "ld-plan-card-featured" : ""}`}>
+{plan.featured && <span className="ld-plan-badge">Mais escolhido</span>}
+<div className="ld-plan-name">{plan.name}</div>
+<div className="ld-plan-tagline">{plan.tagline}</div>
+<ul className="ld-plan-items">
+{plan.items.map((item) => (
+<li key={item} className="ld-plan-item">
+<span className="ld-plan-check">✓</span>
+<span>{item}</span>
+</li>
+))}
+</ul>
+<a href={whatsappUrl} className="ld-btn-plan" target="_blank" rel="noopener noreferrer">
+💬 Consultar valores
+</a>
+</div>
+))}
+</div>
+</div>
+</div>
+
 {/* TECNOLOGIA */}
 <div className="ld-section-dark">
 <div className="ld-section-inner">
+<span className="ld-label">A tecnologia</span>
+<h2 className="ld-title">Uma forma mais <em>inteligente</em><br />de regenerar a pele</h2>
+<p className="ld-tech-intro">
+Antigamente, era necessário provocar uma agressão intensa na pele para estimular sua regeneração. Hoje, com o Laser CO2 SmartXIDE Punto (DEKA) e o Drug Delivery com exossomos regenerativos, levamos diretamente à pele os sinais biológicos que orientam esse processo — permitindo uma regeneração muito mais inteligente, eficiente e confortável do que as técnicas tradicionais.
+</p>
 <div className="ld-tech-layout">
 <div className="ld-laser-wrap">
 <img src="/smartxide-punto-deka.webp" alt="Laser CO2 SmartXIDE Punto DEKA" />
 </div>
 <div>
-<span className="ld-label">A tecnologia</span>
-<h2 className="ld-title">Laser CO2 <em>SmartXIDE</em><br />Punto DEKA</h2>
+<h3 className="ld-title" style={{ fontSize: "clamp(28px, 3.5vw, 38px)" }}>Laser CO2 <em>SmartXIDE</em> Punto DEKA</h3>
 <p className="ld-subtitle ld-subtitle-lt">Pulso ultrafracionado com ponteira Cool Peel para máxima eficácia com mínimo desconforto.</p>
 <div className="ld-tech-list">
 {[
@@ -320,7 +405,7 @@ style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
 <div className="ld-section-inner">
 <span className="ld-label">O que você vai conquistar</span>
 <h2 className="ld-title ld-title-dk">Resultados <em>progressivos</em> e naturais</h2>
-<p className="ld-subtitle ld-subtitle-dk">Ao longo dos 3 a 6 meses de programa, sua pele se transforma de dentro para fora.</p>
+<p className="ld-subtitle ld-subtitle-dk">Ao longo do acompanhamento médico, sua pele se transforma de dentro para fora, com resultados progressivos e naturais.</p>
 <div className="ld-results-grid">
 {[
 { title: "Textura Renovada", desc: "Pele mais lisa, macia e visivelmente renovada já nas primeiras semanas." },
