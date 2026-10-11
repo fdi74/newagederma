@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
-          <img src={logo} alt="New Age Derma" className="h-12 w-auto rounded" />
+          <img src={logo} alt="New Age Derma" width={300} height={169} className="h-12 w-auto rounded" />
         </a>
 
         {/* Desktop Links */}

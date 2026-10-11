@@ -172,11 +172,17 @@
     }
     </script>
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P983BDCJ');</script>
+    <!-- Pré-carrega a imagem principal só na home (LCP) -->
+    <script>
+      if (location.pathname === '/') {
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'image'; l.href = '/hero-bg-1920.webp';
+        l.setAttribute('imagesrcset', '/hero-bg-828.webp 828w, /hero-bg-1920.webp 1920w');
+        l.setAttribute('imagesizes', '100vw');
+        l.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(l);
+      }
+    </script>
     <style>
       body {
         margin: 0;
@@ -184,40 +190,7 @@
         color: #ffffff;
         font-family: 'Inter', sans-serif;
       }
-    </style> <!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '2850405272011010');
-fbq('track', 'PageView');
-
-(function () {
-  var ultimaUrl = location.pathname;
-  function aoMudarPagina() {
-    if (location.pathname !== ultimaUrl) {
-      ultimaUrl = location.pathname;
-      fbq('track', 'PageView');
-    }
-  }
-  var push = history.pushState;
-  history.pushState = function () { push.apply(this, arguments); aoMudarPagina(); };
-  var replace = history.replaceState;
-  history.replaceState = function () { replace.apply(this, arguments); aoMudarPagina(); };
-  window.addEventListener('popstate', aoMudarPagina);
-
-  document.addEventListener('click', function (ev) {
-    var link = ev.target.closest && ev.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-    if (!link) return;
-    var pagina = location.pathname.indexOf('lift-diamond') !== -1 ? 'Lift Diamond' : 'Site geral';
-    fbq('track', 'Contact', { content_name: pagina, content_category: 'WhatsApp' });
-  }, true);
-})();
-</script>
-<!-- End Meta Pixel -->
+    </style>
   </head>
 
   <body>
@@ -246,5 +219,54 @@ fbq('track', 'PageView');
     </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+<!-- Rastreamento (GTM + Meta Pixel): eventos entram na fila imediatamente,
+     mas os scripts externos só baixam após a primeira interação ou 3s depois do load -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+
+!function(f){if(f.fbq)return;var n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window);
+fbq('init', '2850405272011010');
+fbq('track', 'PageView');
+
+(function () {
+  var carregado = false;
+  function addScript(src) {
+    var t = document.createElement('script'); t.async = true; t.src = src;
+    document.head.appendChild(t);
+  }
+  function carregarTerceiros() {
+    if (carregado) return; carregado = true;
+    addScript('https://www.googletagmanager.com/gtm.js?id=GTM-P983BDCJ');
+    addScript('https://connect.facebook.net/en_US/fbevents.js');
+  }
+  ['scroll','pointerdown','touchstart','keydown','mousemove'].forEach(function (ev) {
+    window.addEventListener(ev, carregarTerceiros, { once: true, passive: true });
+  });
+  window.addEventListener('load', function () { setTimeout(carregarTerceiros, 3000); });
+
+  var ultimaUrl = location.pathname;
+  function aoMudarPagina() {
+    if (location.pathname !== ultimaUrl) {
+      ultimaUrl = location.pathname;
+      fbq('track', 'PageView');
+    }
+  }
+  var push = history.pushState;
+  history.pushState = function () { push.apply(this, arguments); aoMudarPagina(); };
+  var replace = history.replaceState;
+  history.replaceState = function () { replace.apply(this, arguments); aoMudarPagina(); };
+  window.addEventListener('popstate', aoMudarPagina);
+
+  document.addEventListener('click', function (ev) {
+    var link = ev.target.closest && ev.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
+    if (!link) return;
+    var pagina = location.pathname.indexOf('lift-diamond') !== -1 ? 'Lift Diamond' : 'Site geral';
+    fbq('track', 'Contact', { content_name: pagina, content_category: 'WhatsApp' });
+  }, true);
+})();
+</script>
   </body>
 </html>

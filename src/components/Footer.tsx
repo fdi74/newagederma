@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="font-display text-2xl font-semibold text-cream mb-1">
               New Age <span className="text-gradient-teal">Derma</span>
             </div>
-            <p className="font-body text-sm text-cream/40">
+            <p className="font-body text-sm text-cream/60">
               Dr. Fabricio Dall'Igna · Dermatologia & Medicina Estética
             </p>
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-slate-light text-center">
-          <p className="font-body text-xs text-cream/30">
+          <p className="font-body text-xs text-cream/55">
             © {new Date().getFullYear()} New Age Derma BC. Todos os direitos reservados.
           </p>
         </div>

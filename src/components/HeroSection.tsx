@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import heroBg from "@/assets/hero-bg.webp";
 
 const WHATSAPP_LINK = "https://wa.me/5547991549098?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
 
@@ -10,10 +9,16 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroBg}
+          src="/hero-bg-1920.webp"
+          srcSet="/hero-bg-828.webp 828w, /hero-bg-1920.webp 1920w"
+          sizes="100vw"
+          width={1920}
+          height={1080}
           alt="New Age Derma - Dermatologia em Balneário Camboriú"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate/90 via-slate/70 to-slate/30" />
       </div>

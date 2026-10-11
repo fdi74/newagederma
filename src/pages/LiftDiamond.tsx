@@ -163,6 +163,8 @@ return (
 <img
 src="/logo-white-teal.webp"
 alt="New Age Derma"
+width={200}
+height={112}
 />
 </a>
 </div>
@@ -393,6 +395,9 @@ cases: [
 {c.img ? (
 <img
 src={c.img}
+loading="lazy"
+decoding="async"
+height={280}
 alt={`${group.category} - ${t.treatment} - ${c.desc}`}
 style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
 />
@@ -483,6 +488,9 @@ className="ld-location-card"
 <img
 src="/logo-white-teal.webp"
 alt="New Age Derma"
+width={200}
+height={112}
+loading="lazy"
 />
 </div>
 <div className="ld-footer-links">

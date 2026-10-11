@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import Estetica from "@/components/ProceduresSection";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider"; // Importando o componente base
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const Estetica = lazy(() => import("@/components/ProceduresSection"));
+const CTASection = lazy(() => import("@/components/CTASection"));
+const Footer = lazy(() => import("@/components/Footer"));
+const WhatsAppFloat = lazy(() => import("@/components/WhatsAppFloat"));
 
 // 1. Importar as imagens (Aqui você cria um "apelido" para o arquivo)
 import antesFacial from "@/assets/before.webp";
@@ -49,15 +48,17 @@ const Index = () => {
         <ServicesSection />
         <AboutSection />
         
+        <Suspense fallback={null}>
         <section id="depoimentos">
           <TestimonialsSection />
         </section>
         
         <Estetica />
+        </Suspense>
 
         {/* 3. Seção de Transformações (Antes e Depois) integrada aqui */}
         <section className="flex flex-col items-center justify-center px-4 py-20 bg-background">
-          <span className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <span className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[hsl(174_80%_25%)]">
             Resultados Comprovados
           </span>
           <h2 className="mb-3 text-center font-display text-4xl font-bold text-foreground md:text-5xl">
@@ -98,11 +99,15 @@ const Index = () => {
           </p>
         </section>
 
-        <CTASection />
+        <Suspense fallback={null}>
+          <CTASection />
+        </Suspense>
       </main>
       
-      <Footer />
-      <WhatsAppFloat />
+      <Suspense fallback={null}>
+        <Footer />
+        <WhatsAppFloat />
+      </Suspense>
     </>
   );
 };
