@@ -129,7 +129,7 @@ const ProcedureModal = ({ procedure, open, onOpenChange }: ProcedureModalProps) 
 
           <div className="mt-7">
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5547991549098?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-teal text-primary-foreground px-6 py-3 text-sm tracking-widest uppercase font-body font-semibold hover:opacity-90 transition-opacity rounded-lg"
