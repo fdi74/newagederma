@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Instagram, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -15,13 +16,14 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 text-cream/50 font-body text-sm">
-            <a href="#" className="flex items-center gap-2 hover:text-teal transition-colors">
+            <a href="https://www.instagram.com/newagedermabc/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-teal transition-colors">
               <Instagram className="w-4 h-4" />
               @newagedermabc
             </a>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              Balneário Camboriú, SC
+              Balneário Camboriú, SC ·{" "}
+              <Link to="/curitiba" className="hover:text-teal transition-colors">Curitiba, PR</Link>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />

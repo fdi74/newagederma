@@ -46,6 +46,9 @@ const Navbar = () => {
           <Link to="/lift-diamond" className="font-body text-sm text-teal-light hover:text-teal transition-colors">
             Lift Diamond
           </Link>
+          <Link to="/curitiba" className="font-body text-sm text-cream/70 hover:text-teal transition-colors">
+            Curitiba
+          </Link>
           <a
             href={WHATSAPP_LINK}
             target="_blank"
@@ -85,6 +88,9 @@ const Navbar = () => {
           </a>
           <Link to="/lift-diamond" onClick={() => setMenuOpen(false)} className="font-body text-teal-light hover:text-teal transition-colors">
             Lift Diamond
+          </Link>
+          <Link to="/curitiba" onClick={() => setMenuOpen(false)} className="font-body text-cream/80 hover:text-teal transition-colors">
+            Curitiba
           </Link>
           <a
             href={WHATSAPP_LINK}
