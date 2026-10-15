@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, MapPin, Phone, CalendarDays, Stethoscope, Scissors, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -22,18 +22,6 @@ const destaques = [
 ];
 
 const Curitiba = () => {
-  useEffect(() => {
-    document.title = "Dermatologista em Curitiba | Dr. Fabricio Dall'Igna – New Age Derma";
-    const meta = document.querySelector('meta[name="description"]');
-    const anterior = meta?.getAttribute("content") ?? null;
-    meta?.setAttribute(
-      "content",
-      "Dermatologista em Curitiba (Cabral). Consulta dermatológica, cirurgia dermatológica, laser e estética com o Dr. Fabricio Dall'Igna. Agende pelo WhatsApp."
-    );
-    return () => {
-      if (meta && anterior !== null) meta.setAttribute("content", anterior);
-    };
-  }, []);
 
   return (
     <>
