@@ -1,5 +1,5 @@
-
 {
+  "cleanUrls": true,
   "redirects": [
     {
       "source": "/Index.aspx",
