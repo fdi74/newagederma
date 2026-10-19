@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, MapPin, Phone, CalendarDays, Stethoscope, Scissors, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/ServicesSection";
+import LeadFormGate from "@/components/LeadFormGate";
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const Estetica = lazy(() => import("@/components/ProceduresSection"));
 const WhatsAppFloat = lazy(() => import("@/components/WhatsAppFloat"));
@@ -21,7 +22,8 @@ const destaques = [
   { icon: Sparkles, titulo: "Estética e laser", texto: "Laser CO2 ultrafracionado, peelings, toxina botulínica, Bioplastia com ácido hialurônico e Lift Diamond." },
 ];
 
-const Curitiba = () => {
+// comFormulario = versão B do teste A/B do Google Ads (formulário curto antes do WhatsApp).
+const Curitiba = ({ comFormulario = false }: { comFormulario?: boolean }) => {
 
   return (
     <>
@@ -185,6 +187,8 @@ const Curitiba = () => {
       <Suspense fallback={null}>
         <WhatsAppFloat />
       </Suspense>
+
+      {comFormulario && <LeadFormGate cidade="Curitiba" />}
     </>
   );
 };
