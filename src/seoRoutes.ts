@@ -3,7 +3,8 @@
 // e no navegador (atualiza as tags quando o visitante troca de página).
 export const SITE_URL = "https://newagedermabc.com.br";
 
-export type RouteSeo = { title: string; description: string };
+// canonical: quando a página é uma variação de outra (ex.: teste A/B), aponta para a original.
+export type RouteSeo = { title: string; description: string; canonical?: string };
 
 export const SEO_ROUTES: Record<string, RouteSeo> = {
   "/": {
@@ -21,6 +22,16 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
     description:
       "Dermatologista em Curitiba (Cabral). Consulta dermatológica, cirurgia dermatológica, laser e estética com o Dr. Fabricio Dall'Igna. Agende pelo WhatsApp.",
   },
+  "/curitiba-agendar": {
+    title: "Dermatologista em Curitiba | Dr. Fabricio Dall'Igna – New Age Derma",
+    description:
+      "Dermatologista em Curitiba (Cabral). Consulta dermatológica, cirurgia dermatológica, laser e estética com o Dr. Fabricio Dall'Igna. Agende pelo WhatsApp.",
+    canonical: "/curitiba",
+  },
+  "/privacidade": {
+    title: "Política de Privacidade | New Age Derma",
+    description: "Como a New Age Derma trata os dados de contato enviados pelo site.",
+  },
   "/contato": {
     title: "Contato e Agendamento | New Age Derma – Dr. Fabricio Dall'Igna",
     description:
@@ -28,5 +39,7 @@ export const SEO_ROUTES: Record<string, RouteSeo> = {
   },
 };
 
-export const canonicalFor = (path: string) =>
-  path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+export const canonicalFor = (path: string) => {
+  const alvo = SEO_ROUTES[path]?.canonical ?? path;
+  return alvo === "/" ? `${SITE_URL}/` : `${SITE_URL}${alvo}`;
+};

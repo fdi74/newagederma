@@ -7,6 +7,8 @@ import RouteMeta from "./components/RouteMeta";
 const Contato = lazy(() => import("./pages/Contato"));
 const LiftDiamond = lazy(() => import("./pages/LiftDiamond"));
 const Curitiba = lazy(() => import("./pages/Curitiba"));
+const CuritibaAgendar = lazy(() => import("./pages/CuritibaAgendar"));
+const Privacidade = lazy(() => import("./pages/Privacidade"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
@@ -18,6 +20,8 @@ const App = () => (
         <Route path="/contato" element={<Contato />} />
         <Route path="/lift-diamond" element={<LiftDiamond />} />
         <Route path="/curitiba" element={<Curitiba />} />
+        <Route path="/curitiba-agendar" element={<CuritibaAgendar />} />
+        <Route path="/privacidade" element={<Privacidade />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
