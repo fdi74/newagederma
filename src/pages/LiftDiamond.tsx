@@ -65,6 +65,10 @@ return (
 .ld-plan-items { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
 .ld-plan-item { display: flex; gap: 12px; padding: 9px 0; font-size: 13.5px; color: #d8d4cc; font-weight: 300; line-height: 1.6; }
 .ld-plan-item-plus { color: #4ecdc4; font-weight: 500; }
+.ld-plans-grid-single { grid-template-columns: minmax(0, 460px); justify-content: center; }
+.ld-plan-price { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 500; color: #4ecdc4; line-height: 1.1; }
+.ld-plan-price-terms { font-size: 13.5px; color: #d8d4cc; font-weight: 300; margin: 6px 0 22px; }
+.ld-plan-note { font-size: 12px; color: #8a9e97; font-weight: 300; line-height: 1.6; margin: -12px 0 24px; }
 .ld-plan-check { color: #4ecdc4; flex-shrink: 0; margin-top: 1px; }
 .ld-btn-plan { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid rgba(255,255,255,0.25); color: #f0ede8; padding: 14px 24px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.3s; text-align: center; }
 .ld-btn-plan:hover { border-color: #4ecdc4; color: #4ecdc4; }
@@ -241,61 +245,34 @@ Protocolo de regeneração com Laser CO2 ultrafracionado + exossomos regenerativ
 {/* PROTOCOLOS / PLANOS */}
 <div className="ld-section-mid" id="protocolos">
 <div className="ld-section-inner">
-<span className="ld-label">Escolha seu protocolo</span>
-<h2 className="ld-title">Três níveis, <em>um mesmo</em> padrão de cuidado</h2>
-<p className="ld-subtitle ld-subtitle-lt">Todos os protocolos incluem avaliação médica, plano domiciliar e acompanhamento contínuo com o Dr. Fabricio — a diferença é a extensão do tratamento.</p>
-<div className="ld-plans-grid">
+<span className="ld-label">Investimento</span>
+<h2 className="ld-title">Protocolo <em>Lift Diamond</em></h2>
+<p className="ld-subtitle ld-subtitle-lt">Avaliação médica, plano domiciliar e acompanhamento contínuo com o Dr. Fabricio.</p>
+<div className="ld-plans-grid ld-plans-grid-single">
+<div className="ld-plan-card ld-plan-card-featured">
+<div className="ld-plan-name">Lift Diamond</div>
+<div className="ld-plan-tagline">Full face ou estrias em área ampla</div>
+<div className="ld-plan-price">R$ 2.500</div>
+<div className="ld-plan-price-terms">R$ 500 de entrada + 4x de R$ 500</div>
+<ul className="ld-plan-items">
 {[
-{
-name: "Lift Diamond",
-tagline: "Protocolo essencial de regeneração",
-items: [
 "Consulta de avaliação com o Dr. Fabricio",
 "Plano de cuidados domiciliar personalizado",
 "Peeling de preparo",
 "1 sessão de Laser CO2 SmartXIDE Punto + exossomos regenerativos",
 "Acompanhamento médico contínuo",
-],
-featured: false,
-},
-{
-name: "Lift Diamond Gold",
-tagline: "Mais cobertura para resultados ampliados",
-items: [
-"Tudo do protocolo Lift Diamond",
-"2 sessões de Laser CO2 + exossomos (ou 2 áreas tratadas)",
-],
-featured: true,
-},
-{
-name: "Lift Diamond VIP",
-tagline: "Protocolo completo, resultados abrangentes",
-items: [
-"Tudo do protocolo Lift Diamond Gold",
-"+ 2 peelings superficiais",
-"+ 2 aplicações de Toxina Botulínica",
-"+ 3ml de Preenchimento com Ácido Hialurônico",
-],
-featured: false,
-},
-].map((plan) => (
-<div key={plan.name} className={`ld-plan-card ${plan.featured ? "ld-plan-card-featured" : ""}`}>
-{plan.featured && <span className="ld-plan-badge">Mais escolhido</span>}
-<div className="ld-plan-name">{plan.name}</div>
-<div className="ld-plan-tagline">{plan.tagline}</div>
-<ul className="ld-plan-items">
-{plan.items.map((item) => (
+].map((item) => (
 <li key={item} className="ld-plan-item">
 <span className="ld-plan-check">✓</span>
 <span>{item}</span>
 </li>
 ))}
 </ul>
+<p className="ld-plan-note">Área pequena, cicatriz isolada ou blefaroplastia sem cirurgia: valor definido na avaliação.</p>
 <a href={whatsappUrl} className="ld-btn-plan" target="_blank" rel="noopener noreferrer">
-💬 Consultar valores
+💬 Agendar avaliação
 </a>
 </div>
-))}
 </div>
 </div>
 </div>
