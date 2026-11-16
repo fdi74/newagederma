@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-slate-light text-center">
           <p className="font-body text-xs text-cream/55">
-            © {new Date().getFullYear()} New Age Derma BC. Todos os direitos reservados.
+            © {new Date().getFullYear()} New Age Derma. Todos os direitos reservados.
           </p>
         </div>
       </div>
