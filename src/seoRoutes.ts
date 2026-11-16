@@ -8,22 +8,22 @@ export type RouteSeo = { title: string; description: string; canonical?: string 
 
 export const SEO_ROUTES: Record<string, RouteSeo> = {
   "/": {
-    title: "Dermatologista em Balneário Camboriú | Dr. Fabricio Dall'Igna",
+    title: "New Age Derma | Dermatologista em Balneário Camboriú – Dr. Fabricio Dall'Igna",
     description:
       "Dr. Fabrício Dall'Igna, dermatologista em Balneário Camboriú. Especialista em melasma, acne, peeling profundo e estética avançada. Agende sua consulta.",
   },
   "/lift-diamond": {
-    title: "Lift Diamond™ | Laser CO2 + Exossomos – Dr. Fabricio Dall'Igna",
+    title: "Lift Diamond™ | Laser CO2 + Exossomos – New Age Derma",
     description:
       "Lift Diamond™: programa exclusivo de regeneração da pele com Laser CO2 ultrafracionado e exossomos, com acompanhamento médico do Dr. Fabricio Dall'Igna em Balneário Camboriú e Curitiba.",
   },
   "/curitiba": {
-    title: "Dermatologista em Curitiba | Dr. Fabricio Dall'Igna – New Age Derma",
+    title: "New Age Derma | Dermatologista em Curitiba – Dr. Fabricio Dall'Igna",
     description:
       "Dermatologista em Curitiba (Cabral). Consulta dermatológica, cirurgia dermatológica, laser e estética com o Dr. Fabricio Dall'Igna. Agende pelo WhatsApp.",
   },
   "/curitiba-agendar": {
-    title: "Dermatologista em Curitiba | Dr. Fabricio Dall'Igna – New Age Derma",
+    title: "New Age Derma | Dermatologista em Curitiba – Dr. Fabricio Dall'Igna",
     description:
       "Dermatologista em Curitiba (Cabral). Consulta dermatológica, cirurgia dermatológica, laser e estética com o Dr. Fabricio Dall'Igna. Agende pelo WhatsApp.",
     canonical: "/curitiba",
