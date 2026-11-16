@@ -38,7 +38,7 @@ const HeroSection = () => {
             className="mb-4"
           >
             <span className="font-body text-sm tracking-[0.3em] uppercase text-teal-light">
-              Dr. Fabricio Dall'Igna — CRM/SC
+              New Age Derma · Dr. Fabricio Dall'Igna
             </span>
           </motion.div>
 
