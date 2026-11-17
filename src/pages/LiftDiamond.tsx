@@ -329,20 +329,15 @@ Antigamente, era necessário provocar uma agressão intensa na pele para estimul
 <p className="ld-subtitle ld-subtitle-lt">Resultados reais de pacientes, organizados por tipo de queixa e tratamento realizado. Resultados variam de pessoa para pessoa.</p>
 {[
 {
-  category: "Marcas de Acne",
-  treatments: [
-    {
-      treatment: "Lift Diamond · 1 sessão",
-      cases: [
-        { desc: "Caso 1", img: "/lift-diamond-marcas-acne-1.webp" },
-        { desc: "Caso 2", img: "/lift-diamond-marcas-acne-2.webp" },
-      ],
-    },
-  ],
-},
-{
 category: "Cicatriz de Acne",
 treatments: [
+          {
+            treatment: "Lift Diamond · 1 sessão",
+            cases: [
+              { desc: "Lado direito", img: "/lift-diamond-marcas-acne-1.webp" },
+              { desc: "Lado esquerdo", img: "/lift-diamond-marcas-acne-2.webp" },
+            ],
+          },
 {
 treatment: "Lift Diamond",
 cases: [
