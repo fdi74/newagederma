@@ -299,6 +299,7 @@ Antigamente, era necessário provocar uma agressão intensa na pele para estimul
 </div>
 </div>
 <div>
+<img src="/smartxide-punto-lift.webp" alt="Laser CO2 SmartXIDE Punto DEKA" width={224} height={520} loading="lazy" decoding="async" style={{ height: 280, width: "auto", display: "block", margin: "0 0 28px", filter: "drop-shadow(0 0 28px rgba(78,205,196,0.35))" }} />
 <h3 className="ld-title" style={{ fontSize: "clamp(28px, 3.5vw, 38px)" }}>Laser CO2 <em>SmartXIDE</em> Punto DEKA</h3>
 <p className="ld-subtitle ld-subtitle-lt">Pulso ultrafracionado com ponteira Cool Peel para máxima eficácia com mínimo desconforto.</p>
 <div className="ld-tech-list">
