@@ -355,6 +355,17 @@ cases: [
 ],
 },
 {
+category: "Olheiras",
+treatments: [
+{
+treatment: "Ácido Hialurônico · 1 mL",
+cases: [
+{ desc: "Caso 1", img: "/lift-diamond-olheiras-1.webp" },
+],
+},
+],
+},
+{
 category: "Rejuvenescimento Avançado",
 treatments: [
 {
