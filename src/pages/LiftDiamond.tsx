@@ -288,9 +288,9 @@ Antigamente, era necessário provocar uma agressão intensa na pele para estimul
 <div className="ld-tech-layout">
 <div className="ld-laser-videos">
 <div className="ld-laser-video-card">
-<video autoPlay muted loop playsInline poster="/lift-diamond-laser-poster.jpg">
-<source src="/lift-diamond-laser-loop.mp4" type="video/mp4" />
-</video>
+<video autoPlay muted loop playsInline preload="auto" aria-label="Dr. Fabricio aplicando o laser CO2 SmartXIDE" onLoadedMetadata={(e) => { e.currentTarget.currentTime = 10; }} onTimeUpdate={(e) => { const el = e.currentTarget; if (el.currentTime < 9.9 || el.currentTime >= 18) el.currentTime = 10; }}>
+                  <source src="/liftdiamond%20video%20.MP4#t=10" type="video/mp4" />
+                </video>
 </div>
 <div className="ld-laser-video-card">
 <video autoPlay muted loop playsInline poster="/lift-diamond-skin-poster.jpg">
