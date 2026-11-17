@@ -97,7 +97,7 @@ return (
 .ld-ad-category:first-of-type { margin-top: 40px; }
 .ld-ad-treatment { margin-bottom: 32px; }
 .ld-ad-treatment-label { display: inline-block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #4ecdc4; font-weight: 600; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid rgba(78,205,196,0.25); }
-.ld-ad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 0; }
+.ld-ad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-top: 0; }
 .ld-ad-card { background: #172219; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
 .ld-ad-images { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 .ld-ad-slot { width: 100%; height: 220px; background: #243028; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
