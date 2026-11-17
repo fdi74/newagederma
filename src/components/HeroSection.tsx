@@ -1,26 +1,42 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import LaserBackground from "./LaserBackground";
 
 const WHATSAPP_LINK = "https://wa.me/5547991549098?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta.";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/hero-bg-1920.webp"
-          srcSet="/hero-bg-828.webp 828w, /hero-bg-1920.webp 1920w"
-          sizes="100vw"
-          width={1920}
-          height={1080}
-          alt="New Age Derma - Dermatologia em Balneário Camboriú"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate/90 via-slate/70 to-slate/30" />
+      {/* Fundo: laser fracionado + foto do Dr. Fabricio + SmartXide */}
+      <div className="absolute inset-0 bg-[#060d10]" aria-hidden="true">
+        <LaserBackground />
+        <div className="absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[52%] pointer-events-none">
+          <img
+            src="/dr-fabricio-hero.webp"
+            alt=""
+            width={640}
+            height={721}
+            className="absolute bottom-0 right-0 md:right-[4%] h-[60vh] md:h-[88vh] w-auto max-w-none opacity-30 md:opacity-100"
+            style={{
+              WebkitMaskImage: "radial-gradient(ellipse 62% 70% at 50% 42%, #000 55%, transparent 100%)",
+              maskImage: "radial-gradient(ellipse 62% 70% at 50% 42%, #000 55%, transparent 100%)",
+            }}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+          <img
+            src="/smartxide-hero.webp"
+            alt=""
+            width={260}
+            height={530}
+            className="hidden lg:block absolute bottom-[4vh] left-[2%] h-[46vh] w-auto"
+            style={{ filter: "drop-shadow(0 0 28px rgba(64, 224, 208, 0.35)) brightness(0.92)" }}
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#060d10]/95 via-[#060d10]/60 to-transparent" />
       </div>
 
       {/* Content */}
