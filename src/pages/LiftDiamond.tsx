@@ -339,6 +339,12 @@ treatments: [
               { desc: "Lado esquerdo", img: "/lift-diamond-marcas-acne-2.webp" },
             ],
           },
+          {
+            treatment: "Lift Diamond · 2 sessões",
+            cases: [
+              { desc: "Antes e depois", img: "/lift-diamond-cicatriz-3.webp" },
+            ],
+          },
 {
 treatment: "Lift Diamond",
 cases: [
