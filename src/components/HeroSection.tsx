@@ -31,7 +31,7 @@ const HeroSection = () => {
             width={260}
             height={530}
             className="hidden lg:block absolute bottom-[3vh] right-[1%] h-[42vh] w-auto"
-            style={{ filter: "drop-shadow(0 0 28px rgba(64, 224, 208, 0.35)) brightness(0.92)" }}
+            style={{ filter: "drop-shadow(0 0 28px rgba(64, 224, 208, 0.35)) brightness(0.92)", clipPath: "inset(3.5% 0 0 0)" }}
             loading="eager"
             decoding="async"
           />
