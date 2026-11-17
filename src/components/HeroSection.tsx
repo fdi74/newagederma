@@ -16,7 +16,7 @@ const HeroSection = () => {
             alt=""
             width={640}
             height={721}
-            className="absolute bottom-0 right-0 md:right-[4%] h-[60vh] md:h-[88vh] w-auto max-w-none opacity-30 md:opacity-100"
+            className="absolute bottom-0 right-1/2 translate-x-1/2 md:translate-x-0 md:right-[4%] lg:right-[12%] h-[62vh] md:h-[88vh] lg:h-[82vh] w-auto max-w-none opacity-50 md:opacity-100"
             style={{
               WebkitMaskImage: "radial-gradient(ellipse 62% 70% at 50% 42%, #000 55%, transparent 100%)",
               maskImage: "radial-gradient(ellipse 62% 70% at 50% 42%, #000 55%, transparent 100%)",
@@ -30,13 +30,13 @@ const HeroSection = () => {
             alt=""
             width={260}
             height={530}
-            className="hidden lg:block absolute bottom-[4vh] left-[2%] h-[46vh] w-auto"
+            className="hidden lg:block absolute bottom-[3vh] right-[1%] h-[42vh] w-auto"
             style={{ filter: "drop-shadow(0 0 28px rgba(64, 224, 208, 0.35)) brightness(0.92)" }}
             loading="eager"
             decoding="async"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#060d10]/95 via-[#060d10]/60 to-transparent" />
+        <div className="absolute inset-0 bg-[#060d10]/50 md:bg-transparent md:bg-gradient-to-r md:from-[#060d10]/95 md:via-[#060d10]/60 md:to-transparent" />
       </div>
 
       {/* Content */}
